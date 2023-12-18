@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./codefile.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="together">
+      <div class="offer">
+        <div id="changed1"><b>Flight: Paris 50EUR</b></div>
+      </div>
+      <div class="offer">
+        <div id="changed2"><b>Flight: Kopenhagen 30EUR</b></div>
+      </div>
+      <div class="offer">
+        <div id="changed3"><b>Flight: Rom 40EUR</b></div>
+      </div>
+      <div class="offer">
+        <div id="changed4"><b>Flight: Amsterdam 40EUR</b></div>
+      </div>
+      <div class="offer">
+        <div id="changed5"><b>Flight: London 15EUR</b></div>
+      </div>
+      <div class="offer">
+        <div id="changed6"><b>Flight: NY 40EUR</b></div>
+      </div>
+      <div class="offer">
+        <div id="changed7"><b>Flight: Barcelona 40EUR</b></div>
+      </div>
+    </div>
+    <form
+      id="formid"
+      action="./bestätigung.html"
+      onsubmit="validierung()"
+      method="get"
+    >
+      <div class="superclass">
+        <h1 id="regititel">Registration</h1>
+        <div class="classeclosingelement">
+          <label for="inputid">Salutation:</label>
+          <input
+            type="text"
+            class="inputid"
+            list="Salutation"
+            name="salutation"
+            id="salutationid"
+          />
+          <datalist id="salutation">
+            <option value="Mr."></option>
+            <option value="Ms."></option>
+            <option value="Mrs."></option>
+            <option value="They"></option>
+            <option value="Gender Neutral"></option>
+          </datalist>
+        </div>
+        <div class="classeclosingelement">
+          <label for="inputid" class="classlabel">Vorname</label>
+
+          <input
+            class="inputid"
+            type="text"
+            id="inputidvorname"
+            name="Vorname"
+          />
+        </div>
+        <div class="classeclosingelement">
+          <label for="inputid" class="classlabel">Lastname</label>
+          <input
+            class="inputid"
+            type="text"
+            id="inputidlastname"
+            name="Lastname"
+          />
+        </div>
+        <div class="classeclosingelement">
+          <label for="inputid">Birthday:</label>
+          <input
+            id="inputidbirthday"
+            type="date"
+            class="inputid"
+            name="Birthday"
+          />
+        </div>
+        <div class="classeclosingelement">
+          <label for="inputid" class="classlabel">Street</label>
+          <input class="inputid" type="text" id="inputidstreet" name="Street" />
+        </div>
+        <div class="classeclosingelement">
+          <label for="inputid" class="classlabel">PLZ</label>
+          <input class="inputid" type="number" id="inputidplz" name="PLZ" />
+        </div>
+        <div class="classeclosingelement">
+          <label for="inputid" class="classlabel">Village</label>
+          <input
+            class="inputid"
+            type="text"
+            id="inputidvillage"
+            name="Village"
+          />
+        </div>
+        <div class="classeclosingelement">
+          <label for="inputid" class="classlabel">Email</label>
+          <input class="inputid" type="email" id="inputidemail" name="Email" />
+        </div>
+        <div class="classeclosingelement">
+          <label for="inputid" class="classlabel">Telefon</label>
+          <input class="inputid" type="" id="inputidtel" name="Telefon" />
+        </div>
+        <div class="checkboxes">
+          <label for="agb">AGB</label>
+          <input type="checkbox" id="agb" />
+          <label for="nein">No</label>
+          <input type="checkbox" id="nein" />
+          <label for="yes">Yes</label>
+          <input type="checkbox" id="yes" />
+        </div>
+      </div>
+      <input type="submit" value="Submit" id="regfinished" />
+    </form>
+    <p id="pvorname" style="color: red; font-size: 10px"></p>
+    <p id="plastname" style="color: red; font-size: 10px"></p>
+    <p id="geburi" style="color: red; font-size: 10px"></p>
+    <p id="street" style="color: red; font-size: 10px"></p>
+    <p id="plz" style="color: red; font-size: 10px"></p>
+    <p id="village" style="color: red; font-size: 10px"></p>
+  </body>
+</html>

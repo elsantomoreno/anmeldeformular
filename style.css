@@ -1,0 +1,149 @@
+.enclosingdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#regititel {
+  z-index: 100;
+}
+.together {
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  width: 500px;
+  top: 0px;
+  left: 0px;
+  animation: versuch 1s linear infinite;
+  animation-direction: unset;
+  animation-duration: 10s;
+}
+
+@keyframes versuch {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    top: 0px;
+    left: 500px;
+  }
+}
+.offer {
+  box-sizing: border-box;
+  border-style: solid;
+  background-color: white;
+}
+#changed1 {
+  color: red;
+}
+#changed2 {
+  background-color: black;
+  color: yellow;
+}
+#changed3 {
+  color: purple;
+}
+#changed4 {
+  background-color: black;
+  color: cornsilk;
+}
+#changed5 {
+  background-color: red;
+  color: orange;
+}
+#changed6 {
+  color: chocolate;
+}
+#changed7 {
+  background-color: yellow;
+  color: purple;
+}
+
+body {
+  background-image: url("./iPhone\ SE\ -\ 6.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.surroundingarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.superclass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 200px;
+}
+.classeclosingelement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 40%;
+  margin-top: 5px;
+}
+.areas {
+  margin-top: 20px;
+  background-color: blue;
+  width: 40%;
+  height: 40%;
+}
+#bildid {
+  width: 40%;
+  margin-top: 20px;
+}
+#textid {
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  font-size: 26.5px;
+  width: 100%;
+}
+#regid {
+  width: 400px;
+  margin-top: 50px;
+  height: 30px;
+  background-color: blue;
+}
+.classlabel {
+  position: relative;
+  right: 0px;
+  display: flex;
+}
+.inputid {
+  width: 170px;
+}
+.checkboxes {
+  margin-top: 20px;
+}
+#regfinished {
+  margin-top: 10px;
+  width: 180px;
+}
+
+#bildbstätigung {
+  background-color: blue;
+  width: 100%;
+  height: 40%;
+  margin-top: 20px;
+}
+.textbestätigung {
+  margin-top: 20px;
+  font-size: 25px;
+  width: 100%;
+}
+#btnangebote {
+  width: 100%;
+  background-color: blue;
+}
