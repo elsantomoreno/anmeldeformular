@@ -13,6 +13,8 @@ function validierung() {
       case "salutation":
         if (!salutationarray.includes(element.value)) {
           document.getElementById("salutationid").style.borderColor = "red";
+          document.getElementById("saluid").innerHTML =
+            "Please enter your genre";
         } else {
           counter++;
         }
@@ -73,7 +75,6 @@ function validierung() {
         break;
 
       case "Street":
-        alert(element.value);
         if (!element.value) {
           document.getElementById("inputidstreet").style.borderColor = "red";
           document.getElementById("street").innerHTML =
@@ -93,8 +94,17 @@ function validierung() {
       case "Village":
         if (!element.value) {
           document.getElementById("inputidvillage").style.borderColor = "red";
-          document.getElementById("plz").innerHTML =
+          document.getElementById("villageid").innerHTML =
             "Please enter your village";
+        } else {
+          counter++;
+        }
+        break;
+      case "Email":
+        if (!element.value || element.value.length < 9) {
+          document.getElementById("inputidemail").style.borderColor = "red";
+          document.getElementById("emailid").innerHTML =
+            "Please enter your email";
         } else {
           counter++;
         }
@@ -102,12 +112,13 @@ function validierung() {
       case "Telefon":
         if (!element.value || element.value.length < 9) {
           document.getElementById("inputidtel").style.borderColor = "red";
+          document.getElementById("telid").innerHTML =
+            "Please enter your telefon";
         } else {
           counter++;
         }
         break;
     }
-
-    if (counter == 9) document.getElementById("formid").submit();
   });
+  if (counter == 9) document.getElementById("formid").submit();
 }
