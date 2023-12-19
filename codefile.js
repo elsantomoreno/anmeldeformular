@@ -6,11 +6,16 @@ function validierung() {
 
   const datenow = new Date();
   const date18yearsbefore = datenow.getFullYear() - 18;
+
+  let counter = 0;
   inputvalues.forEach((element) => {
     switch (element.name) {
       case "salutation":
-        if (!salutationarray.includes(element.value))
+        if (!salutationarray.includes(element.value)) {
           document.getElementById("salutationid").style.borderColor = "red";
+        } else {
+          counter++;
+        }
 
         break;
 
@@ -23,8 +28,11 @@ function validierung() {
             : "";
         document.getElementById("pvorname").innerHTML =
           noname1 + "" + namesize1;
-        if (noname1 || namesize1)
+        if (noname1 || namesize1) {
           document.getElementById("inputidvorname").style.borderColor = "red";
+        } else {
+          counter++;
+        }
 
         break;
 
@@ -35,8 +43,13 @@ function validierung() {
           wert.length < 2
             ? "Your lastname should at least be 2 characters long"
             : "";
-        if (noname || namesize)
+        if (noname || namesize) {
           document.getElementById("inputidlastname").style.borderColor = "red";
+          document.getElementById("plastname").innerHTML =
+            noname + "" + namesize;
+        } else {
+          counter++;
+        }
 
         break;
       case "Birthday":
@@ -53,6 +66,8 @@ function validierung() {
           document.getElementById("inputidbirthday").style.borderColor = "red";
           document.getElementById("geburi").innerHTML =
             "Please enter you birthday";
+        } else {
+          counter++;
         }
 
         break;
@@ -63,12 +78,16 @@ function validierung() {
           document.getElementById("inputidstreet").style.borderColor = "red";
           document.getElementById("street").innerHTML =
             "Please enter in a value for the red input areas";
+        } else {
+          counter++;
         }
         break;
       case "PLZ":
         if (!element.value) {
           document.getElementById("inputidplz").style.borderColor = "red";
           document.getElementById("plz").innerHTML = "Please enter your plz";
+        } else {
+          counter++;
         }
         break;
       case "Village":
@@ -76,14 +95,19 @@ function validierung() {
           document.getElementById("inputidvillage").style.borderColor = "red";
           document.getElementById("plz").innerHTML =
             "Please enter your village";
+        } else {
+          counter++;
         }
         break;
       case "Telefon":
         if (!element.value || element.value.length < 9) {
           document.getElementById("inputidtel").style.borderColor = "red";
+        } else {
+          counter++;
         }
         break;
     }
-    document.getElementById("formid").submit();
+
+    if (counter == 9) document.getElementById("formid").submit();
   });
 }
